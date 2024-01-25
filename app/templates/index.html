@@ -1,0 +1,24 @@
+<!-- app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Articles</title>
+</head>
+<body>
+    <h1>News Articles</h1>
+    <ul>
+        {% for article in articles %}
+            <li>
+                <strong>{{ article.title }}</strong>
+                <p>RSS Category: {{ article.rss_category }}</p>
+                <p>SpaCy Category: {{ article.spacy_category }}</p>
+                <p><a href="{{ article.link }}" target="_blank">Read more</a></p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
