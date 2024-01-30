@@ -26,3 +26,6 @@ db.sqlite
 
 # Ignore the Python generated folder
 __pycache__/
+
+# celery beat schedule
+celerybeat-schedule
